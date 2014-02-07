@@ -1,0 +1,473 @@
+/* Styles for mobile devices */
+
+@media screen and (max-width: 480px) {
+    /*.nav {*/
+    /*padding: 0.5em;*/
+    /*}*/
+
+    /*.nav li {*/
+    /*margin: 0 0.5em 0 0;*/
+    /*padding: 0.25em;*/
+    /*}*/
+
+    /* Hide individual steps in pagination, just have next & previous */
+    /*.pagination .step, .pagination .currentStep {*/
+    /*display: none;*/
+    /*}*/
+
+    /*.pagination .prevLink {*/
+    /*float: left;*/
+    /*}*/
+
+    /*.pagination .nextLink {*/
+    /*float: right;*/
+    /*}*/
+
+    /* pagination needs to wrap around floated buttons */
+    /*.pagination {*/
+    /*overflow: hidden;*/
+    /*}*/
+
+    /* slightly smaller margin around content body */
+    /*fieldset,*/
+    /*.property-list {*/
+    /*padding: 0.3em 1em 1em;*/
+    /*}*/
+
+    /*input, textarea {*/
+    /*width: 100%;*/
+    /*-moz-box-sizing: border-box;*/
+    /*-webkit-box-sizing: border-box;*/
+    /*-ms-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+    /*}*/
+
+    /*select, input[type=checkbox], input[type=radio], input[type=submit], input[type=button], input[type=reset] {*/
+    /*width: auto;*/
+    /*}*/
+
+    /* hide all but the first column of list tables */
+    /*.scaffold-list td:not(:first-child),*/
+    /*.scaffold-list th:not(:first-child) {*/
+    /*display: none;*/
+    /*}*/
+
+    /*.scaffold-list thead th {*/
+    /*text-align: center;*/
+    /*}*/
+
+    /* stack form elements */
+    /*.fieldcontain {*/
+    /*margin-top: 0.6em;*/
+    /*}*/
+
+    /*.fieldcontain label,*/
+    /*.fieldcontain .property-label,*/
+    /*.fieldcontain .property-value {*/
+    /*display: block;*/
+    /*float: none;*/
+    /*margin: 0 0 0.25em 0;*/
+    /*text-align: left;*/
+    /*width: auto;*/
+    /*}*/
+
+    /*.errors ul,*/
+    /*.message p {*/
+    /*margin: 0.5em;*/
+    /*}*/
+
+    /*.error ul {*/
+    /*margin-left: 0;*/
+    /*}*/
+
+
+
+
+}
+.myBody {
+    padding: 2px;
+
+    width: 35%;
+
+    min-width: 444px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#OOBALogintitle {
+
+    color: #333;
+    font: 24px verdana, arial, helvetica, sans-serif;
+
+}
+
+.OobaLayout {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+
+}
+
+.OobaFooter {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+
+}
+
+.yizhang {
+
+}
+
+.yizhang .name {
+    border-bottom: 50px;
+    text-align: justify;
+    width: 15%;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.yizhang.value {
+    text-align: left;
+    width: 85%;
+
+}
+
+.loginButton {
+    color: #2b2629;
+    font-size: 13px;
+    margin-top: 7px;
+    border: 1px outset gray;
+    background-color: #F7F7F7;
+    text-decoration: none;
+
+}
+
+.loginButton:hover {
+    font-size: 13px;
+    margin-top: 7px;
+    border: 1px inset black;
+    background-color: grey;
+    color: #000000;
+    text-decoration: none;
+}
+
+.message {
+    background: #eee no-repeat;
+    color: #006dba;
+    margin: 0 0 2px 0;
+    padding: 0 5px 5px 0;
+}
+
+.navigateTitle {
+    font-size: 26px;
+    /*font-weight: bold;*/
+    vertical-align: bottom;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.logoImage {
+    margin-bottom: 10px;
+
+}
+
+.defaultBody {
+    max-width: 65%;
+    margin-top: 30px;
+
+    padding-top: 10px;
+
+
+}
+
+.newBody {
+    padding: 0;
+    background-image:url('../images/london_night.jpg')
+
+}
+
+.bs-docs-nav {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .15);
+
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.bs-header {
+    padding-top: 40px; /* side padding builds on .container 15px, so 30px */
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+}
+
+.account {
+    float: right;
+    margin-top: 10px;
+
+}
+
+.location {
+    float: left;
+    margin-top: 10px;
+
+}
+
+.secondTitle {
+    margin-top: 5px;
+    float: right;
+    font-size: 28px;
+}
+
+.Foot {
+    border-top-width: 1px;
+    border-color: #333;
+    margin-top: 5px;
+}
+
+.FootLink {
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.CopyRight {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.header_link {
+    margin-top: 5px;
+    margin-left: -65px;
+    margin-right: -50px;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: right;
+    color: #000000;
+    background: #AAEDFD;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.loginForm {
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.changePasswordForm {
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.dashboardFont {
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    padding:0 5px;
+}
+.dashboardIcon{
+    text-align: right;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+.dashboardDevice{
+    font-size: 16px;
+    text-align: left;
+    vertical-align: middle;
+    padding:0 5px;
+}
+
+
+
+.tableInDashboard {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center
+}
+
+.loginBoard {
+
+    /*width: 400px;*/
+    padding: 10px;
+    margin: auto;
+    background-color: #DEDEE0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    text-align: center;
+
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    height: 112px;
+    position: relative;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+.dashBoardBoard {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.userBoard {
+
+    /*padding-bottom: 20px;*/
+    margin: auto;
+    margin-top: 20px;
+    /*background-color: #DEDEE0;*/
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.userInfoLeft {
+    width: 40%;
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.userInfoRight {
+
+    width:60%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.popup {
+    position: absolute;
+    display: none; /* keeps the popup hidden if no JS available */
+}
+
+.trigger {
+    position: absolute;
+}
+
+
+.headerBackground{
+    background: #ffffff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.headerPosition{
+    padding-left : 20px;
+    padding-right: 20px;
+}
+.topPosition{
+    margin-top: 70px;
+
+}
+
+.locationAndSecondTitle{
+    font-size: 16px;color: dodgerblue;font-weight: bold
+
+}
+
+.div-for-headerpic{
+    margin: 1px;
+    padding: 1px;
+
+}
+.name-frame {
+    background-color: #fff;
+    background-color: rgba(255,255,255,.6);
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 0 1px #4a4a4a;
+    -webkit-border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+.frame{
+    background-color: rgba(255,255,255,.6);
+    text-align: center;
+    box-shadow: 0 0 1px #4a4a4a;
+    -webkit-border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    margin-bottom: 10px;
+
+}
+.opacity{
+    opacity:0.9;
+}
+
+.pic-frame{
+    /*background-color: rgba(255,255,255,.6);*/
+    /*text-align: center;*/
+
+    border-radius: 6px;
+    /*margin:5px 10px;*/
+
+    padding: 10px;
+
+}
+
+.album-title{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.right{
+    text-align: right
+}
+
+
+
+
+#bottom-text{
+
+    color: #999
+}
+
+
+#bottom-bar{
+    text-align: center; font-size: 16px; margin-top: 60px  ;
+
+}
+#bottom-text:hover{
+
+    color: #ffffff;
+}
