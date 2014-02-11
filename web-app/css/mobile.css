@@ -186,8 +186,9 @@
 }
 
 .newBody {
-    padding: 0;
-    background-image:url('../images/london_night.jpg')
+    background-image:url('../images/london_night.jpg');
+    background-attachment:fixed;
+
 
 }
 
@@ -452,6 +453,10 @@
 
 .right{
     text-align: right
+}
+
+.left{
+    text-align: left;
 }
 
 

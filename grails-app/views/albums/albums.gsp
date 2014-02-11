@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="mywebsite.Photos" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
 
@@ -20,40 +20,47 @@
 
 <div style="text-align: center">
 
-    %{--<div class="col-lg-6 col-md-pull-8 col-md-offset-2 col-sm-pull-8 col-sm-offset-2 ">--}%
     <div class="col-lg-7  col-lg-offset-1  ">
+        <g:each in="${albums}" var="a">
 
-        <div class="col-lg-4 ">
+            <div class="col-lg-4 ">
             %{--loop albums--}%
-            <div class="frame ">
-                <a href="#">
-                    <p class="album-title">Album1</p>
+                <div class="frame ">
+                    <g:link controller="photos" action="index" params = "[albumName:a.value.albumName]">
+                        <p class="album-title">${a.value.albumName}</p>
+
                     %{--get first pic--}%
-                    <img src="${resource(dir: 'images', file: 'me.jpg')}" style="margin-bottom: 5px"
-                         class=" img-rounded"
-                         alt="" width="90%"/>
+                        <img  src='../${a.value.firstPic}' style="margin-bottom: 5px"
+                              class=" img-rounded"
+                              alt="" width="90%"/>
 
 
-                    <div>
-                        %{--loop the pics 2 to 5--}%
-                        <img src="${resource(dir: 'images', file: 'me.jpg')}" style="margin-bottom: 5px"
-                             class=" img-rounded" alt="" width="20%"/>
+                        <div>
+                            %{--loop the pics 2 to 5--}%
+                            <img src="../${a.value.smallPics[0]}" style="margin-bottom: 5px"
+                                 class=" img-rounded" alt="" width="20%"/>
 
-                        <img src="${resource(dir: 'images', file: 'me.jpg')}" style="margin-bottom: 5px"
-                             class=" img-rounded" alt="" width="20%"/>
 
-                        <img src="${resource(dir: 'images', file: 'me.jpg')}" style="margin-bottom: 5px"
-                             class=" img-rounded" alt="" width="20%"/>
 
-                        <img src="${resource(dir: 'images', file: 'me.jpg')}" style="margin-bottom: 5px"
-                             class=" img-rounded" alt="" width="20%"/>
+                            <img src="../${a.value.smallPics[1]}"  style="margin-bottom: 5px"
+                                 class=" img-rounded" alt="" width="20%"/>
 
-                    </div>
-                </a>
+                            <img src="../${a.value.smallPics[2]}" style="margin-bottom: 5px"
+                                 class=" img-rounded" alt="" width="20%"/>
 
-            </div>
+                            <img src="../${a.value.smallPics[3]}" style="margin-bottom: 5px"
+                                 class=" img-rounded" alt="" width="20%"/>
+
+                        </div>
+                    </g:link>
+
+                </div>
+
 
         </div>
+        </g:each>
+
+
 
     </div>
 
@@ -66,12 +73,12 @@
 
             %{--loop the popular pics --}%
             <a href="#">
-                <img src="${resource(dir: 'images', file: 'me.jpg')}" style="margin-bottom: 5px" class=" img-rounded"
+                <img src="${resource(dir: 'images', file: 'photos/me.jpg')}" style="margin-bottom: 5px" class=" img-rounded"
                      alt="" width="90%"/>
 
             </a>
             <a href="#">
-                <img src="${resource(dir: 'images', file: 'me.jpg')}" style="margin-bottom: 5px" class=" img-rounded"
+                <img src="${resource(dir: 'images', file: 'photos/me.jpg')}" style="margin-bottom: 5px" class=" img-rounded"
                      alt="" width="90%"/>
 
             </a>
@@ -82,12 +89,13 @@
 
 </div>
 
+<script type="text/javascript">
+
+    $('#albums').addClass('active');
+
+
+</script>
+
 </body>
 </html>
 
-<script type="text/javascript">
-    document.ready(function () {
-        $('#albums').addClass('active');
-    });
-
-</script>

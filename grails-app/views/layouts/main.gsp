@@ -84,7 +84,7 @@
 %{--</div><!-- /.navbar-collapse -->--}%
 %{--</nav>--}%
 
-<nav class="navbar   navbar-default bs-docs-nav headerBackground headerPosition" role="navigation">
+<nav class="navbar   navbar-default bs-docs-nav headerBackground headerPosition " role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -113,7 +113,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">About me <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><g:link controller="aboutme" action="index">selfIntro</g:link></li>
-                        <li><g:link controller="aboutme" action="">Experience(not done)</g:link></li>
+                        <li><g:link controller="aboutme" action="experience">Experience(not done)</g:link></li>
 
                         %{--it's a divider line--}%
                         <li class="divider"></li>
@@ -151,7 +151,6 @@
     %{--</a>--}%
     %{--</div>--}%
 
-    <div class="row">
         <div id="header-profile" class="col-lg-4 col-sm-12 col-lg-offset-6">
 
             %{--<div id="name-frame" class="col-lg-8">--}%
@@ -165,7 +164,7 @@
             %{--</div   >--}%
 
             <div class="media">
-                <img src="${resource(dir: 'images', file: 'me.jpg')}"
+                <img src="${resource(dir: 'images', file: 'photos/me.jpg')}"
                      class="img-thumbnail name-frame pull-right story-small" style="margin-left: 1px; padding:2px;" width="128" height="128" />
 
                 <div  class="media-body name-frame ">
@@ -178,7 +177,6 @@
 
         </div>
 
-    </div>
 
 
 

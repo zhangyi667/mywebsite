@@ -2,5 +2,7 @@ package mywebsite
 
 class NotesController {
 
-    def index() { }
+    def index() {
+    render(view: "notes")
+    }
 }
