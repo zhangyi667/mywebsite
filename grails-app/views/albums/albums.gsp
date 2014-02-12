@@ -30,26 +30,47 @@
                         <p class="album-title">${a.value.albumName}</p>
 
                     %{--get first pic--}%
-                        <img  src='../${a.value.firstPic}' style="margin-bottom: 5px"
+                        <img  src='..${a.value.firstPic}' style="margin-bottom: 5px"
                               class=" img-rounded"
                               alt="" width="90%"/>
 
 
                         <div>
                             %{--loop the pics 2 to 5--}%
-                            <img src="../${a.value.smallPics[0]}" style="margin-bottom: 5px"
-                                 class=" img-rounded" alt="" width="20%"/>
-
-
-
-                            <img src="../${a.value.smallPics[1]}"  style="margin-bottom: 5px"
-                                 class=" img-rounded" alt="" width="20%"/>
-
-                            <img src="../${a.value.smallPics[2]}" style="margin-bottom: 5px"
-                                 class=" img-rounded" alt="" width="20%"/>
-
+                            <g:if test="${a.value.smallPics[3]}">
+                                <img src="../${a.value.smallPics[3]}" style="margin-bottom: 5px"
+                                     class=" img-thumbnail" alt="" width="20%"/>
+                            </g:if>  <g:else>
                             <img src="../${a.value.smallPics[3]}" style="margin-bottom: 5px"
-                                 class=" img-rounded" alt="" width="20%"/>
+                                 class=" img-thumbnail invisible" alt="" width="20%"/>
+                             </g:else>
+
+                            <g:if test="${a.value.smallPics[2]}">
+                                <img src="../${a.value.smallPics[2]}" style="margin-bottom: 5px"
+                                     class=" img-thumbnail" alt="" width="20%"/>
+                            </g:if>  <g:else>
+                            <img src="../${a.value.smallPics[2]}" style="margin-bottom: 5px"
+                                 class=" img-thumbnail invisible" alt="" width="20%"/>
+                             </g:else>
+
+                            <g:if test="${a.value.smallPics[1]}">
+                                <img src="../${a.value.smallPics[1]}" style="margin-bottom: 5px"
+                                     class=" img-thumbnail" alt="" width="20%"/>
+                            </g:if>  <g:else>
+                            <img src="../${a.value.smallPics[1]}" style="margin-bottom: 5px"
+                                 class=" img-thumbnail invisible" alt="" width="20%"/>
+                            </g:else>
+
+
+
+                            <g:if test="${a.value.smallPics[0]}">
+                                <img src="../${a.value.smallPics[0]}" style="margin-bottom: 5px"
+                                     class=" img-thumbnail" alt="" width="20%"/>
+                            </g:if>  <g:else>
+                            <img src="../${a.value.smallPics[0]}" style="margin-bottom: 5px"
+                                 class=" img-thumbnail invisible" alt="" width="20%"/>
+                            </g:else>
+
 
                         </div>
                     </g:link>

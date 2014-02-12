@@ -452,7 +452,7 @@
 }
 
 .right{
-    text-align: right
+    text-align: right;
 }
 
 .left{
@@ -475,4 +475,53 @@
 #bottom-text:hover{
 
     color: #ffffff;
+}
+
+
+.frame-container {
+    position: relative;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    padding: 0;
+    display: inline-block;
+    border: solid white 2px;
+    -webkit-box-shadow: 0 1px 3px #4a4a4a;
+    -moz-box-shadow: 0 1px 3px #4a4a4a;
+    box-shadow: 0 1px 3px #4a4a4a;
+}
+.frame-container:hover .frame-description {
+    display: block;
+}
+
+.frame-description {
+    display: none;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 1;
+}
+/*.frame-description:hover {*/
+    /*background-color: #000000;*/
+
+/*}*/
+
+
+
+.clear-right {
+    clear: right;
+    display: block;
+}
+
+.gray {
+    color: #999;
+}
+
+.white{
+    color: #ffffff;
+}
+.frame-container p {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
 }

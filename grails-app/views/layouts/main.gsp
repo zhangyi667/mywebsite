@@ -145,7 +145,7 @@
 </nav>
 
 
-<div >
+<div style="text-align: center" >
     %{--<div>--}%
     %{--<a href="http://www.deepnetsecurity.com/dualshield">--}%
     %{--</a>--}%
@@ -168,9 +168,9 @@
                      class="img-thumbnail name-frame pull-right story-small" style="margin-left: 1px; padding:2px;" width="128" height="128" />
 
                 <div  class="media-body name-frame ">
-                    <h4 class="media-heading">Yi Zhang</h4>
+                    <h4 class="media-heading right">Yi Zhang</h4>
 
-                    <p>This is a very bored boy.</p>
+                    <p class="right">This is a very bored boy.</p>
 
                 </div>
             </div>

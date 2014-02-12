@@ -4,7 +4,7 @@ class Albums {
 
     String albumName
     Integer picsAccount
-    Integer year
+    String year
 
 
 

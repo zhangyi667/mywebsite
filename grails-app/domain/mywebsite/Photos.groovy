@@ -4,7 +4,7 @@ class Photos {
 
     String photoDesc
     Integer likeAccount
-    Integer createTime
+    String createTime
     String location
     String albumName
 

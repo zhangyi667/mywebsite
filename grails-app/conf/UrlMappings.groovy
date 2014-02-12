@@ -9,5 +9,7 @@ class UrlMappings {
 
 		"/"(controller: "front")
 		"500"(view:'/error')
+
+
 	}
 }
