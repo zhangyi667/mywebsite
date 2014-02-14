@@ -7,7 +7,7 @@ class PhotosController {
 
     static def okContentTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif']
     static String dir = "/images/photos/"
-    static int maxResults = 10 //number of pics loaded per request
+    static int maxResults = 9 //number of pics loaded per request
 
 
     def index() {
@@ -18,7 +18,7 @@ class PhotosController {
 
             def photos = c {
                 eq("albumName", params.albumName)
-                order("createTime", "desc")
+                order("id", "desc")
                 maxResults(maxResults)
             }
 
@@ -27,6 +27,7 @@ class PhotosController {
             model.current = maxResults
             model.album = params.albumName
             render(view: "photos", model: model)
+            return
         } else {
             def photos = c {
 
@@ -38,7 +39,7 @@ class PhotosController {
             def model = ['photos': photos]
             model.current = maxResults
             render(view: "photos", model: model)
-
+             return
         }
 
 
@@ -57,6 +58,8 @@ class PhotosController {
         if (id) {
             if (!prev && !next) {
                 def single = Photos.findById(id)
+                single.likeAccount+=1;
+                single.save();
 
                 def model = ['pic': single]
 
@@ -98,7 +101,8 @@ class PhotosController {
                         }
 
                         def a = [] as JSONObject
-
+                        photos.getAt(0).likeAccount+=1;
+                        photos.getAt(0).save();
                         a.error = 0
                         a.photo = photos
                         a.prev = photos.getAt(0).id != firstId
@@ -117,7 +121,8 @@ class PhotosController {
                         }
 
                         def a = [] as JSONObject
-
+                        photos.getAt(0).likeAccount+=1;
+                        photos.getAt(0).save();
                         a.error = 0
                         a.photo = photos
                         a.prev = photos.getAt(0).id != firstId
@@ -165,7 +170,10 @@ class PhotosController {
             photos = allPhotos.subList(currentNumber, currentNumber + maxResults - 1)
         }
 
-
+        photos.each {
+            it.likeAccount+=1;
+            it.save();
+        }
         model.photos = photos
         model.current = currentNumber + 10
         render(view: "photos", model: model)
@@ -273,26 +281,26 @@ class PhotosController {
 
     private addOnePhoto(String albumName, def desc, def location) {
         def now = new Date();
-        def creatTime = now.format("dd/MMM/yyyy", TimeZone.getTimeZone("GMT"))
+        def createTime = now.format("dd/MMM/yyyy", TimeZone.getTimeZone("GMT"))
         if (!Albums.findAllByAlbumName(albumName)) {
             //if the album doesn't exist, create a new one
 
             def a = new Albums()
             a.albumName = albumName
-            a.year = creatTime
+            a.year = createTime
             a.picsAccount = 0
             a.save()
 
 
 
             def p = new Photos();
-            p.createTime = creatTime
+            p.createTime = createTime
             p.likeAccount = 0;
             p.photoDesc = desc
             p.albumName = albumName
             p.location = location
             a.addToPics(p)
-            a.picsAccount + 1;
+            a.picsAccount+=1;
             a.save()
             p.save()
 
@@ -302,14 +310,14 @@ class PhotosController {
             def b = Albums.findByAlbumName(albumName)
 
             def p = new Photos();
-            p.createTime = creatTime
+            p.createTime = createTime
             p.likeAccount = 0;
             p.photoDesc = desc
             p.albumName = albumName
             p.location = location
 
             b.addToPics(p)
-            b.picsAccount + 1;
+            b.picsAccount += 1;
             b.save()
             p.save()
 //            b.each {it->

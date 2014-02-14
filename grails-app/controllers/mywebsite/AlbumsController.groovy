@@ -5,7 +5,7 @@ import org.codehaus.groovy.grails.web.json.JSONObject
 
 class AlbumsController {
     static def smallPicSize = 5
-
+    static  def maxResults = 5
 
     def scafford = Albums
 
@@ -114,72 +114,21 @@ class AlbumsController {
 
         }
         model.albums = albums
+
+
+        def c = Photos.createCriteria()
+
+        def photos = c {
+
+            order("likeAccount", "desc")
+            maxResults(maxResults)
+        }
+
+        model.popular = photos
+
+
         return model
     }
 
-//    def update() {
-//        //albumName is fetched from submitting
-//
-////        addOnePhoto("me","This is me","photos/me.jpg")
-////        addOnePhoto("rat","A rat","tuzi.gif")
-////        addOnePhoto("me","Me and my friend","phtots/IMG_9613.jpg")
-////        addOnePhoto("rat","Me and my friend","photos/IMG_3220 copy.jpg")
-//
-//
-//
-//
-//        def model = getThePhotos()
-//        render(view: "albums",model: model)
-//        return
-//
-//
-//    }
 
-    def addOnePhoto(String albumName, String desc, String location) {
-
-        if (!Albums.findAllByAlbumName(albumName)) {
-            //if the album doesn't exist, create a new one
-
-            def a = new Albums()
-            a.albumName = albumName
-            a.year = 1
-            a.picsAccount = 0
-            a.save()
-
-            def p = new Photos();
-            p.createTime = 1
-            p.likeAccount = 0;
-            p.photoDesc = desc
-            p.albumName = albumName
-            p.location = location
-            a.addToPics(p)
-            a.picsAccount + 1;
-            a.save()
-            p.save()
-
-
-        } else {
-            // else, add the pic to the existing album
-            def b = Albums.findByAlbumName(albumName)
-
-            def p = new Photos();
-            p.createTime = 1
-            p.likeAccount = 0;
-            p.photoDesc = desc
-            p.albumName = albumName
-            p.location = location
-
-            b.addToPics(p)
-            b.picsAccount + 1;
-            b.save()
-            p.save()
-//            b.each {it->
-//                it.addToPics(p)
-//                it.picsAccount+=1
-//                it.save()
-//            }
-
-
-        }
-    }
 }

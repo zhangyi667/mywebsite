@@ -146,34 +146,38 @@
 
 
 <div style="text-align: center" >
-    %{--<div>--}%
-    %{--<a href="http://www.deepnetsecurity.com/dualshield">--}%
-    %{--</a>--}%
-    %{--</div>--}%
 
-        <div id="header-profile" class="col-lg-4 col-sm-12 col-lg-offset-6">
 
-            %{--<div id="name-frame" class="col-lg-8">--}%
-            %{--<p>--}%
-            %{--Welcome blah blah blah...--}%
-            %{--</p>--}%
-            %{--</div  >--}%
-            %{--<div class="div-for-headerpic"  >--}%
-            %{--<img src="${resource(dir: 'images', file: 'tuzi.gif')}" class="img-thumbnail" />--}%
+        <div class="row">
 
-            %{--</div   >--}%
+            <div id="header-profile" class="col-lg-4 col-sm-12 col-lg-offset-6">
 
-            <div class="media">
-                <img src="${resource(dir: 'images', file: 'photos/me.jpg')}"
-                     class="img-thumbnail name-frame pull-right story-small" style="margin-left: 1px; padding:2px;" width="128" height="128" />
+                %{--<div id="name-frame" class="col-lg-8">--}%
+                %{--<p>--}%
+                %{--Welcome blah blah blah...--}%
+                %{--</p>--}%
+                %{--</div  >--}%
+                %{--<div class="div-for-headerpic"  >--}%
+                %{--<img src="${resource(dir: 'images', file: 'tuzi.gif')}" class="img-thumbnail" />--}%
 
-                <div  class="media-body name-frame ">
-                    <h4 class="media-heading right">Yi Zhang</h4>
+                %{--</div   >--}%
 
-                    <p class="right">This is a very bored boy.</p>
+                <div class="media">
+                    <img src="${resource(dir: 'images', file: 'photos/me.jpg')}"
+                         class="img-thumbnail name-frame pull-right story-small" style="margin-left: 1px; padding:2px;" width="128" height="128" />
 
+                    <div  class="media-body name-frame ">
+                        <h4 class="media-heading right">Yi Zhang</h4>
+
+                        <p class="right">This is a very bored boy.</p>
+
+                    </div>
                 </div>
+
             </div>
+
+            <div class="col-lg-2"></div>
+
 
         </div>
 

@@ -17,7 +17,7 @@
 
         <div class="col-lg-9 1 frame ">
             <g:if test="${album}">
-                <h4>${album}</h4>
+                <h4>Album: ${album}</h4>
             </g:if>
 
 
@@ -72,12 +72,13 @@
                     <h4 class="modal-title" id="myModalLabel">Upload files</h4>
                 </div>
                 <div class="modal-body">
-                    <g:form method="POST" controller="photos" action="upload" enctype="multipart/form-data" class="form-group">
-                        <input type="file" name="uploadFile" required=""/>
+                    <g:uploadForm method="POST" controller="photos" action="upload" enctype="multipart/form-data" >
+                        <input  type="file" name="uploadFile" required="" style="margin-bottom: 5px"/>
+                        %{--<button type="file" class="btn btn-primary " name="uploadFile" required="" style="margin-bottom: 5px;float: left">Choose File </button>--}%
                         <input type="text" class="form-control" style="padding-left: 3px" placeholder="Album Name" required="" autofocus=""  name="albumName"/>
                         <input type="text" style="padding-left: 3px" class="form-control" placeholder="Description"   name="desc"/>
                         <input type="submit" value="Upload" />
-                    </g:form>
+                    </g:uploadForm>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
