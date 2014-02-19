@@ -169,7 +169,7 @@
                     <div  class="media-body name-frame ">
                         <h4 class="media-heading right">Yi Zhang</h4>
 
-                        <p class="right">This is a very bored boy.</p>
+                        <p class="right">${signature}</p>
 
                     </div>
                 </div>

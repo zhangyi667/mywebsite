@@ -3,13 +3,12 @@ package mywebsite
 class Front {
 
     String name
-    String signiture
+    String signature
     String email
     String twitter
-    String welcome
-    String websiteIntro
-    String selfIntro
-    String projectLog
+    String location
+
+
 
 
     static constraints = {

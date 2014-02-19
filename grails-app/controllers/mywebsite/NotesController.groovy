@@ -29,7 +29,7 @@ class NotesController {
             def b = Notes.findById(params.id)
             if (b == null){
                     flash.message = "Error happened. Cannot find the blog."
-                redirect(action: "index")
+                render(view:"notes")
                 return
 
             }   else{
@@ -75,26 +75,7 @@ class NotesController {
     }
 
 
-    def singleBlog() {
 
-        def id = params.id
-
-
-        if (id) {
-            def blog = Notes.findById(id);
-
-            def model = ['blog':blog]
-
-            render(view: "blog",model: model)
-             return
-        } else {
-
-            redirect(action:"index")
-
-        }
-
-
-    }
 
 
     def upload() {
@@ -103,7 +84,7 @@ class NotesController {
 //        def md5 = generateMD5(file)
         String title = params.title
 
-        String blogName = java.util.UUID.randomUUID().toString();
+        String blogName = java.util.UUID.randomUUID().toString() + ".txt"
 
 
         def fileType = file.getContentType()
