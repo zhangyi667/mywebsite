@@ -26,8 +26,8 @@ environments {
             dbCreate = "update"
 //            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
             url = "jdbc:mysql://localhost:2345/bbb?useUnicode=yes&characterEncoding=UTF-8"
-            username = "root"
-            password = ""
+            username = "yi"
+            password = "1234"
 
         }
     }
@@ -35,10 +35,13 @@ environments {
         dataSource {
             dbCreate = "update"
 //            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
-            url = "jdbc:mysql://localhost/bbb?useUnicode=yes&characterEncoding=UTF-8"
-            username = "root"
-            password = ""
+            url = "jdbc:mysql://yizhang-west2-mysql-instance1.cfszty0kvi1j.eu-west-1.rds.amazonaws.com:3306/aaa?user=yi&password=1234&useUnicode=yes&characterEncoding=UTF-8"
+            username = "yi "
+            password = "1234"
             pooled = true
+            driverClassName = "com.mysql.jdbc.Driver"
+            url = "jdbc:mysql://{endpoint}:{port_number}/ebdb?user={user}&password={password}"
+            dialect = org.hibernate.dialect.MySQL5InnoDBDialect
             properties {
                maxActive = -1
                minEvictableIdleTimeMillis=1800000
