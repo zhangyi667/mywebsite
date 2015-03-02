@@ -1,0 +1,14 @@
+This is a test.
+This is the second line.
+Below is the example of coding:
+<code>def index() {
+
+        def file = new File("/home/yi/work/myprojects/mywebsite/web-app/test.txt")
+
+        // Success.
+
+        String a = file.text.replace("\n","<br>")
+
+      def model =  [log: a]
+    render(view: "notes",contentType: "text/html", model: model)
+    }</code>
