@@ -35,8 +35,11 @@ environments {
         dataSource {
             dbCreate = "update"
 //            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
-            url = "jdbc:mysql://yizhang-west2-mysql-instance1.cfszty0kvi1j.eu-west-1.rds.amazonaws.com:3306/aaa?user=yi&password=1234&useUnicode=yes&characterEncoding=UTF-8"
-            username = "yi "
+//            url = "jdbc:mysql://yizhang-west2-mysql-instance1.cfszty0kvi1j.eu-west-1.rds.amazonaws.com:3306/aaa?user=yi&password=1234&useUnicode=yes&characterEncoding=UTF-8"
+//            username = "yi "
+//            password = "1234"
+            url = "jdbc:mysql://localhost:2345/bbb?useUnicode=yes&characterEncoding=UTF-8"
+            username = "yi"
             password = "1234"
             pooled = true
             driverClassName = "com.mysql.jdbc.Driver"
