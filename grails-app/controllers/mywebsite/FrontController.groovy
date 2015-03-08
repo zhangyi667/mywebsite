@@ -1,5 +1,6 @@
 package mywebsite
 
+import com.yi.exception.UserNotFoundException
 import org.codehaus.groovy.grails.web.context.ServletContextHolder
 
 class FrontController {
@@ -17,7 +18,17 @@ class FrontController {
 //
         def model = [:]
 
-        def user = Front.findByName("Zhang Yi")
+        def user = Front.findByName(Front.HOLDER_NAME)
+        if (!user) {
+            user = new Front([
+                    name:Front.HOLDER_NAME,
+                    email:Front.HOLDER_EMAIL,
+                    location:Front.HOLDER_FILE_LOCATION,
+                    signature:Front.HOLDER_SIG
+            ])
+            user.save(flush: true)
+        }
+
         def file = new File("web-app" + user.location).text
         def records = new XmlParser().parseText(file)
         def welcome = records.welcome.text()
@@ -139,7 +150,7 @@ class FrontController {
     private addFront(String signature, String email, String twitter, String location) {
 
 
-        def f = new Front();
+        def f = findUser()
         f.email = email
         f.location = location
         f.twitter = twitter
@@ -153,7 +164,7 @@ class FrontController {
     private changeFront(String signature, String email, String twitter, String location) {
 
 
-        def f = Front.findByName("Zhang Yi")
+        def f = findUser()
         if (email)
             f.email = email
         if (location)
@@ -168,6 +179,14 @@ class FrontController {
 
 
     }
+    private def findUser(){
+        def f = Front.findByName(Front.HOLDER_NAME)
+        if (!f) {
+            throw new UserNotFoundException()
+        }
+        return f
+    }
+
 
     def changeStatus() {
         def file = request.getFile('uploadFile')

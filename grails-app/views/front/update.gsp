@@ -52,7 +52,7 @@
     </div>
 
     <div class="frame">
-        <p>Change Self Info</p>
+        <p>Change Self Info Status</p>
         <g:uploadForm method="POST" controller="front" action="changeStatus" enctype="multipart/form-data" >
         %{--<button type="file" class="btn btn-primary " name="uploadFile" required="" style="margin-bottom: 5px;float: left">Choose File </button>--}%
             <input type="text" class="form-control" style="padding-left: 3px" placeholder="signature"  autofocus=""  name="signature"/>
